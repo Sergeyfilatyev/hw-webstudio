@@ -1,0 +1,28 @@
+.work {
+  display: flex;
+  margin-top: 50px;
+}
+.work__item {
+  width: calc((100% - 60px) / 3);
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+.work__thumb {
+  position: relative;
+}
+.work__subtitle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  @include font(700, 14px, 16px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  bottom: 0;
+  color: $white-text-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}

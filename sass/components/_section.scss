@@ -1,0 +1,35 @@
+.section {
+  &--user-background {
+    background-color: $background-second-color;
+  }
+}
+.section__title {
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-color;
+}
+
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &--no-padding-top {
+      display: none;
+    }
+  }
+  .section__title {
+    @include font(700, 28px, 33px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    &--no-padding-top {
+      padding-top: 0;
+    }
+  }
+  .section__title {
+    @include font(700, 36px, 42px);
+  }
+}

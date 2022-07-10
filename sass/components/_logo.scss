@@ -1,0 +1,15 @@
+.logo {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  @include font(700, 26px, 31px);
+  letter-spacing: 0.03em;
+  color: $accent-color;
+}
+
+.logo__dark {
+  color: $title-color;
+}
+
+.logo__light {
+  color: $white-text-color;
+}

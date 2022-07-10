@@ -1,0 +1,160 @@
+.modal-form {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-form__title {
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-color;
+}
+.modal-contact__label {
+  margin-bottom: 10px;
+}
+.modal-contact__name {
+  display: block;
+  margin-bottom: 4px;
+  @include font(400, 12px, 14px);
+  letter-spacing: 0.01em;
+  color: $main-color;
+}
+
+.modal-contact__input {
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+  @include font(400, 12px, 14px);
+  letter-spacing: 0.01em;
+  color: $main-color;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms $cubic-beizer-hover;
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
+  }
+}
+
+.modal-contact__wrap {
+  display: block;
+  position: relative;
+}
+.modal-contact__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: $title-color;
+  transition: fill 250ms $cubic-beizer-hover;
+  .form-contact__input:focus + & {
+    fill: $accent-color;
+  }
+}
+
+.modal-comentary__label {
+  margin-bottom: 20px;
+}
+.modal-comentary__name {
+  display: block;
+  margin-bottom: 4px;
+  @include font(400, 12px, 14px);
+  letter-spacing: 0.01em;
+  color: $main-color;
+}
+.modal-comentary__area {
+  display: block;
+  padding: 12px 16px;
+  height: 120px;
+  width: 100%;
+  @include font(400, 12px, 14px);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  transition: border-color 250ms $cubic-beizer-hover;
+  letter-spacing: 0.01em;
+  color: $main-color;
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
+  }
+  &::placeholder {
+    @include font(400, 12px, 14px);
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.modal-checkbox__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modal-checkbox__icon {
+  border: 2px solid $title-color;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 250ms $cubic-beizer-hover, border 250ms $cubic-beizer-hover;
+  .modal-checkbox__input:checked + .modal-checkbox__label & {
+    background-color: $accent-color;
+    border: none;
+  }
+  .modal-checkbox__input:focus + .modal-checkbox__label & {
+    border: 2px solid $accent-color;
+  }
+  .modal-checkbox__input:checked.modal-checkbox__input:focus + .modal-checkbox__label & {
+    border: none;
+  }
+}
+
+.modal-agreement {
+  margin-left: 8px;
+  letter-spacing: 0.03em;
+  color: $main-color;
+}
+.modal-agreement__link {
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  text-decoration: underline;
+}
+.modal-form__btn {
+  padding: 10px 55px;
+  margin-left: auto;
+  margin-right: auto;
+  @include font(700, 16px, 30px);
+  letter-spacing: 0.06em;
+  background-color: $accent-color;
+  color: $white-text-color;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms $cubic-beizer-hover;
+  &:focus,
+  &:hover {
+    background-color: $btn-hover;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .modal-form__title {
+    @include font(700, 20px, 30px);
+  }
+  .modal-agreement {
+    @include font(400, 12px, 14px);
+  }
+  .modal-agreement__link {
+    @include font(400, 12px, 14px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__title {
+    @include font(700, 20px, 23px);
+  }
+  .modal-agreement {
+    @include font(400, 14px, 24px);
+  }
+  .modal-agreement__link {
+    @include font(400, 14px, 24px);
+  }
+}
